@@ -2,7 +2,7 @@
 set -euo pipefail
 
 echo "${0##*/}": Building...
-dotnet build --configuration Release --nologo
+dotnet build src/ --configuration Release --nologo
 
 echo "${0##*/}": Testing...
-dotnet test --configuration Release --no-build --nologo "${1:-}" "${2:-}"
+dotnet test src/ --configuration Release --no-build --nologo "${1:-}" "${2:-}"
